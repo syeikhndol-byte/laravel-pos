@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/login", \App\Livewire\Auth\Login::class)->name("login")->middleware('guest');
+Route::get("/register", \App\Livewire\Auth\Register::class)->name("register")->middleware('guest');
 
 Route::middleware('auth')->group(function (){
     Route::get("/", \App\Livewire\Home::class)->name("home");

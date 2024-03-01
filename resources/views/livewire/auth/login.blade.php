@@ -71,7 +71,7 @@
                     </div>
                     <div class="mt-2 text-muted text-center" style="font-size: small">
                         {{ __("Don't have an account?") }} <a
-                            href="auth-register.html">{{ __('Create') }}</a>
+                            href="{{ route('register') }}">{{ __('Create') }}</a>
                     </div>
                     <div class="text-muted text-center" style="font-size: small">
                         {{ __('Copyright') }} &copy; {{ __('CSO CODE') }}

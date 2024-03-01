@@ -2,6 +2,8 @@
 
 namespace App\Livewire\Users;
 
+use App\Models\Post;
+use App\Models\User;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
@@ -10,6 +12,7 @@ class Index extends Component
 {
     public function render()
     {
-        return view('livewire.users.index');
+        $users = User::query()->latest()->get();
+        return view('livewire.users.index',['users' => $users]);
     }
 }
