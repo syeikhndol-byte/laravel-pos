@@ -21,12 +21,11 @@
             </div>
         </div>
         <div class="card-body">
-            <!-- Flash Message -->
-            @forelse ($posts as $post)
-                @include('livewire.posts._post')
-            @empty
-                @include('livewire.posts._null_post')
-            @endforelse
+            @if ($posts->count() > 0)
+                @include('livewire.users._users')
+            @else
+                @include('livewire.users._null_users')
+            @endif
         </div>
     </div>
 </div>

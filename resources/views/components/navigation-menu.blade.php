@@ -5,8 +5,10 @@
             <span class="mini-icon">-</span>
         </a>
     </li>
-    <x-nav-link :active="request()->routeIs('home')" href="{{ route('home') }}">Dashboard</x-nav-link>
-    <x-nav-link :active="request()->routeIs('posts.*')" href="{{ route('posts.index') }}">Post</x-nav-link>
-    <x-nav-link :active="request()->routeIs('users.*')" href="{{ route('users.index') }}">Users</x-nav-link>
-    <x-nav-link :active="request()->routeIs('about')" href="/about">Setting Apps</x-nav-link>
+    <x-nav-link :active="request()->routeIs('home')" href="{{ route('home') }}">{{ __('Dashboard') }}</x-nav-link>
+    <x-nav-link :active="request()->routeIs('catproduct.*')" href="{{ route('catproduct.index') }}">{{ __('Category Product') }}</x-nav-link>
+    <x-nav-link :active="request()->routeIs('product.*')" href="{{ route('product.index') }}">{{ __('Product') }}</x-nav-link>
+    <x-nav-link :active="request()->routeIs('posts.*')" href="{{ route('posts.index') }}">{{ __('Post') }}</x-nav-link>
+    <x-nav-link :active="request()->routeIs('users.*')" href="{{ route('users.index') }}">{{ __('Users') }}</x-nav-link>
+    <x-nav-link :active="request()->routeIs('about')" href="/about">{{ __('Setting') }}</x-nav-link>
 </ul>

@@ -25,11 +25,11 @@
         </div>
         <div class="card-body">
             <!-- Flash Message -->
-            @forelse ($users as $user)
+            @if ($users->count() > 0)
                 @include('livewire.users._users')
-            @empty
+            @else
                 @include('livewire.users._null_users')
-            @endforelse
+            @endif
         </div>
     </div>
 </div>

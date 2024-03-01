@@ -22,9 +22,11 @@ Route::middleware('auth')->group(function (){
     Route::get("/contact", \App\Livewire\Contact::class)->name("contact");
     Route::get("posts", \App\Livewire\Posts\Index::class)->name("posts.index");
     Route::get("posts/form-create", \App\Livewire\Posts\Create::class)->name("posts.create");
-    Route::get("user/{user}", \App\Livewire\User\Show::class)->name("user.show");
 
     Route::get("users", \App\Livewire\Users\Index::class)->name("users.index");
+
+    Route::get("product", \App\Livewire\Product\Index::class)->name("product.index");
+    Route::get("category-product", \App\Livewire\CategoryProduct\Index::class)->name("catproduct.index");
 
     Route::post("logout", \App\Http\Controllers\LogoutController::class)->name("logout");
 });
